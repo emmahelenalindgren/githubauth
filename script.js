@@ -42,6 +42,7 @@ firebase.auth().signOut()
 	// Utloggning misslyckades
     infoTextFail.innerHTML = "Utloggning misslyckades";
 });
+    infoText.innerHTML =  "";   
     autBtn.style.display = "inherit"; 
     logoutBtn.style.display = "none";  
 });       
