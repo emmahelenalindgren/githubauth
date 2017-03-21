@@ -10,12 +10,7 @@ window.addEventListener("load", function() {
     var user;
     
     
-    if (user.email == "emmahelenalindgren@gmail.com"){
-        vipBtn.disabled = false;
-    } else {
-       vipBtn.disabled = false; 
-    }
-    
+  
     
     /**** VIP knapp ****/
     
@@ -38,6 +33,12 @@ window.addEventListener("load", function() {
 			} else {
 				infoText.innerHTML = `Du är inloggad som ${user.displayName}`;
 			}
+              if (user.email == "emmahelenalindgren@gmail.com"){
+        vipBtn.disabled = false;
+    } else {
+       vipBtn.disabled = false; 
+    }
+    
 		});
 		autBtn.style.display = "none";
 		logoutBtn.style.display = "inherit";
