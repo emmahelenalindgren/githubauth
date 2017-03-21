@@ -8,6 +8,7 @@ logoutBtn.style.display = "none";
 var infoText = document.getElementById("infotext"); 
 var infoTextFail = document.getElementById("infotextFail");     
    
+    
 
 /**** log in knapp ****/
     
@@ -16,7 +17,7 @@ autBtn.addEventListener("click", function(event){
 .then(function(result) {
 	// Om autentisering lyckas, så finns användarinfo i user
 	let user = result.user;
-    infoText.innerHTML =  `Du är inloggad som ${user.displayName}`;
+    infoText.innerHTML =  `Du är inloggad som ${user.email}`;
         
 }); 
     autBtn.style.display = "inherit"; 
