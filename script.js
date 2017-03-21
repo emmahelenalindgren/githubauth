@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
 				infoText.innerHTML = `Du är inloggad som ${user.email}`;
 			} else {
 				infoText.innerHTML = `Du är inloggad som ${user.displayName}`;
-			};
+			}
 		});
 		autBtn.style.display = "none";
 		logoutBtn.style.display = "inherit";
