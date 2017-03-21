@@ -7,7 +7,7 @@ var logoutBtn = document.getElementById("logoutBtn");
 logoutBtn.style.display = "none";    
 var infoText = document.getElementById("infotext"); 
 var infoTextFail = document.getElementById("infotextFail");     
-infoText.innerHTML = "";    
+   
 
 /**** log in knapp ****/
     
