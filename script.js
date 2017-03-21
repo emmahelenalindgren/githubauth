@@ -35,8 +35,9 @@ window.addEventListener("load", function() {
 			}
               if (user.email == "emmahelenalindgren@gmail.com"){
         vipBtn.disabled = false;
+                  
     } else {
-       vipBtn.disabled = false; 
+       vipBtn.disabled = true; 
     }
     
 		});
