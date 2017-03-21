@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 	var infoTextFail = document.getElementById("infotextFail");
     
     
-	logoutBtn.style.display = "none";
+	//logoutBtn.style.display = "none";
     
     
 	/**** log in knapp ****/
@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
     
     
 	/**** logout knapp ****/
-	autBtn.addEventListener("click", function(event) {
+	logoutBtn.addEventListener("click", function(event) {
 		firebase.auth().signInWithPopup(provider)
 		firebase.auth().signOut().then(function(result) {
 			// Utloggning lyckades
