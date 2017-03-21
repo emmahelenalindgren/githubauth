@@ -1,0 +1,13 @@
+#loginButton {
+    display: inherit;
+}
+
+
+
+#logOutButton {
+    display: none;
+}
+
+.chatpart1 {
+    display: none;
+}
