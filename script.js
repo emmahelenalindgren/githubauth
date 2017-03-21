@@ -17,11 +17,14 @@ autBtn.addEventListener("click", function(event){
 .then(function(result) {
 	// Om autentisering lyckas, så finns användarinfo i user
 	let user = result.user;
-    infoText.innerHTML =  `Du är inloggad som ${user.email}`;
-        
+       if (user.displayName == null){   
+           infoText.innerHTML =  `Du är inloggad som ${user.email}`;
+       } else {
+          infoText.innerHTML =  `Du är inloggad som ${user.displayName}`;   
+       };     
 }); 
-    autBtn.style.display = "inherit"; 
-    logoutBtn.style.display = "none"; 
+    autBtn.style.display = "none"; 
+    logoutBtn.style.display = "inherit"; 
 });    
   
     
@@ -39,8 +42,8 @@ firebase.auth().signOut()
 	// Utloggning misslyckades
     infoTextFail.innerHTML = "Utloggning misslyckades";
 });
-    autBtn.style.display = "none"; 
-    logoutBtn.style.display = "inherit";  
+    autBtn.style.display = "inherit"; 
+    logoutBtn.style.display = "none";  
 });       
     
 
