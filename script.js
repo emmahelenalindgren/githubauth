@@ -7,8 +7,9 @@ window.addEventListener("load", function() {
 	var infoText = document.getElementById("infotext");
 	var infoTextFail = document.getElementById("infotextFail");
     var vipBtn = document.getElementById("vipBtn");
-    var user;
     let userEmail;
+    
+    vipBtn.disabled = true;
     
     
   
@@ -16,7 +17,6 @@ window.addEventListener("load", function() {
     /**** VIP knapp ****/
     
     
-	
     
     
 	logoutBtn.style.display = "none";
