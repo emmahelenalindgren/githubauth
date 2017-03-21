@@ -15,9 +15,7 @@ window.addEventListener("load", function() {
     /**** VIP knapp ****/
     
     
-	vipBtn.addEventListener("click", function(event) {
-	window.alert("hej emma");
-	});
+	
     
     
 	logoutBtn.style.display = "none";
@@ -35,7 +33,9 @@ window.addEventListener("load", function() {
 			}
               if (user.email == "emmahelenalindgren@gmail.com"){
         vipBtn.disabled = false;
-                  
+        vipBtn.addEventListener("click", function(event) {
+	window.alert("hej emma");
+	});          
     } else {
        vipBtn.disabled = true; 
     }
