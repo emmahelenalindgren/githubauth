@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 	var infoTextFail = document.getElementById("infotextFail");
     var vipBtn = document.getElementById("vipBtn");
     var user;
+    let userEmail;
     
     
   
@@ -26,16 +27,15 @@ window.addEventListener("load", function() {
 		firebase.auth().signInWithPopup(provider).then(function(result) {
 			// Om autentisering lyckas, så finns användarinfo i user
 			let user = result.user;
+            userEmail = user.email;
 			if (user.displayName == null) {
 				infoText.innerHTML = `Du är inloggad som ${user.email}`;
 			} else {
 				infoText.innerHTML = `Du är inloggad som ${user.displayName}`;
 			}
-              if (user.email == "emmahelenalindgren@gmail.com"){
+              if (userEmail == "emmahelenalindgren@gmail.com"){
         vipBtn.disabled = false;
-        vipBtn.addEventListener("click", function(event) {
-	window.alert("hej emma");
-	});          
+                 
     } else {
        vipBtn.disabled = true; 
     }
@@ -46,8 +46,15 @@ window.addEventListener("load", function() {
 	});
     
     
+     vipBtn.addEventListener("click", function(event) {
+	window.alert("hej emma");
+	});
+    
+    
 	/**** logout knapp ****/
 	logoutBtn.addEventListener("click", function(event) {
+        userEmail = null;
+        vipBtn.disabled = true;
 		firebase.auth().signInWithPopup(provider)
 		firebase.auth().signOut().then(function(result) {
 			// Utloggning lyckades
@@ -58,7 +65,7 @@ window.addEventListener("load", function() {
 			console.log("utloggning misslyckades");
 			infoTextFail.innerHTML = "Utloggning misslyckades";
 		});
-		infoText.innerHTML = "";
+		//infoText.innerHTML = "";
 		autBtn.style.display = "inherit";
 		logoutBtn.style.display = "none";
 	});
