@@ -6,9 +6,26 @@ window.addEventListener("load", function() {
 	var logoutBtn = document.getElementById("logoutBtn");
 	var infoText = document.getElementById("infotext");
 	var infoTextFail = document.getElementById("infotextFail");
+    var vipBtn = document.getElementById("vipBtn");
+    var user;
     
     
-	//logoutBtn.style.display = "none";
+    if (user.email == "emmahelenalindgren@gmail.com"){
+        vipBtn.disabled = false;
+    } else {
+       vipBtn.disabled = false; 
+    }
+    
+    
+    /**** VIP knapp ****/
+    
+    
+	vipBtn.addEventListener("click", function(event) {
+	window.alert("hej emma");
+	});
+    
+    
+	logoutBtn.style.display = "none";
     
     
 	/**** log in knapp ****/
@@ -43,6 +60,10 @@ window.addEventListener("load", function() {
 		autBtn.style.display = "inherit";
 		logoutBtn.style.display = "none";
 	});
+    
+    
+  
+    
     
     
     
