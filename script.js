@@ -10,16 +10,7 @@ window.addEventListener("load", function() {
     let userEmail;
     
     vipBtn.disabled = true;
-    
-    
-  
-    
-    /**** VIP knapp ****/
-    
-    
-    
-    
-	logoutBtn.style.display = "none";
+    logoutBtn.style.display = "none";
     
     
 	/**** log in knapp ****/
@@ -46,7 +37,9 @@ window.addEventListener("load", function() {
 	});
     
     
-     vipBtn.addEventListener("click", function(event) {
+    
+    /**** VIP knapp ****/
+    vipBtn.addEventListener("click", function(event) {
 	window.alert("hej emma");
 	});
     
@@ -70,10 +63,7 @@ window.addEventListener("load", function() {
 		logoutBtn.style.display = "none";
 	});
     
-    
-  
-    
-    
+      
     
     
 });
